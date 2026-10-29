@@ -1,0 +1,634 @@
+.inner-hero {
+  padding: 72px 0 28px;
+  background: linear-gradient(180deg, rgba(16, 36, 90, 0.96), rgba(29, 63, 145, 0.96));
+  color: #fff;
+}
+
+.inner-hero-grid {
+  display: grid;
+  grid-template-columns: 1.15fr 0.85fr;
+  gap: 48px;
+  align-items: center;
+}
+
+.inner-hero-copy {
+  max-width: 640px;
+}
+
+.inner-hero-copy h1,
+.inner-hero-copy p,
+.inner-hero-copy .eyebrow {
+  color: #fff;
+}
+
+.inner-hero-copy .eyebrow {
+  color: #FFFFFF;
+}
+
+.inner-hero-copy p {
+  max-width: 560px;
+  color: rgba(255, 255, 255, 0.8);
+  font-size: 1.03rem;
+}
+
+.inner-hero-image {
+  min-height: 330px;
+  overflow: hidden;
+  border-radius: 18px;
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  box-shadow: 0 20px 45px rgba(16, 36, 90, 0.28);
+}
+
+.inner-hero-image img,
+.image-fallback {
+  width: 100%;
+  height: 100%;
+  min-height: 330px;
+  object-fit: cover;
+}
+
+.image-fallback {
+  display: grid;
+  place-items: center;
+  gap: 12px;
+  background: #f3f6fb;
+  color: #10245a;
+  font-weight: 700;
+}
+
+.company-section-heading {
+  margin-bottom: 28px;
+}
+
+.company-section-heading h2 {
+  margin-bottom: 0.7rem;
+}
+
+.company-section-heading p,
+.about-company-grid p,
+.mission-cards p,
+.market-intro p,
+.process-card p,
+.catalogue-card-content p,
+.overview-card-body p,
+.contact-detail a,
+.contact-detail p,
+.contact-coordinator,
+.form-description,
+.form-service-notice,
+.form-submit-row span,
+.unknown-product p {
+  color: var(--color-text-secondary);
+}
+
+.about-company-grid,
+.contact-page-grid,
+.market-intro,
+.product-detail-layout {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 40px;
+  align-items: start;
+}
+
+.company-values,
+.mission-cards,
+.process-grid,
+.category-overview-grid,
+.catalogue-grid,
+.gallery-grid {
+  display: grid;
+  gap: 24px;
+}
+
+.company-values,
+.mission-cards {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
+.company-values article,
+.mission-cards article,
+.process-card,
+.overview-card,
+.catalogue-card,
+.enquiry-form-card,
+.market-icon-card,
+.contact-details,
+.contact-detail,
+.gallery-card {
+  border: 1px solid var(--color-border);
+  border-radius: 16px;
+  background: #fff;
+  box-shadow: 0 10px 26px rgba(16, 36, 90, 0.04);
+}
+
+.company-values article,
+.mission-cards article,
+.process-card,
+.overview-card-body,
+.catalogue-card-content {
+  padding: 24px;
+}
+
+.values-icon {
+  display: inline-grid;
+  place-items: center;
+  width: 42px;
+  height: 42px;
+  margin-bottom: 12px;
+  border-radius: 12px;
+  background: #F3F6FB;
+  color: var(--color-primary);
+}
+
+.credentials-note {
+  display: flex;
+  gap: 20px;
+  align-items: flex-start;
+  padding: 28px 30px;
+  border: 1px solid var(--color-border);
+  border-radius: 18px;
+  background: #f3f6fb;
+}
+
+.credentials-note svg {
+  flex-shrink: 0;
+  color: var(--color-primary);
+}
+
+.callout-section {
+  padding-top: 0;
+}
+
+.callout-card {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 24px;
+  padding: 28px 30px;
+  border: 1px solid var(--color-border);
+  border-radius: 18px;
+  background: linear-gradient(135deg, #f3f6fb, #ffffff);
+}
+
+.filter-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin: 0 0 28px;
+}
+
+.filter-button {
+  padding: 10px 16px;
+  border: 1px solid var(--color-border);
+  border-radius: 999px;
+  background: #fff;
+  color: var(--color-text);
+  font-weight: 600;
+  transition: all 200ms ease;
+}
+
+.filter-button[aria-pressed="true"],
+.filter-button:hover {
+  border-color: var(--color-primary);
+  background: var(--color-primary);
+  color: #fff;
+}
+
+.catalogue-grid {
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+
+.catalogue-card {
+  overflow: hidden;
+}
+
+.catalogue-card-image {
+  display: block;
+  aspect-ratio: 4 / 3;
+  overflow: hidden;
+  background: #F3F6FB;
+}
+
+.catalogue-card-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 220ms ease;
+}
+
+.catalogue-card:hover .catalogue-card-image img {
+  transform: scale(1.04);
+}
+
+.catalogue-card-content {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.catalogue-category {
+  color: var(--color-secondary-dark);
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
+
+.catalogue-card-content h2 {
+  margin: 0;
+  font-size: 1.38rem;
+}
+
+.catalogue-card-content h2 a {
+  color: var(--color-primary-dark);
+}
+
+.catalogue-card-content p {
+  margin: 0;
+  line-height: 1.7;
+}
+
+.catalogue-card-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 18px;
+  margin-top: auto;
+  padding-top: 12px;
+}
+
+.text-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  color: var(--color-primary);
+  font-weight: 700;
+}
+
+.product-detail-section {
+  padding-top: 42px;
+}
+
+.breadcrumbs {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 24px;
+  color: var(--color-text-secondary);
+  font-size: 0.9rem;
+}
+
+.breadcrumbs a,
+.breadcrumbs span {
+  color: inherit;
+}
+
+.product-detail-photo {
+  overflow: hidden;
+  border: 1px solid var(--color-border);
+  border-radius: 18px;
+  background: #fff;
+}
+
+.product-detail-photo img {
+  width: 100%;
+  min-height: 460px;
+  object-fit: cover;
+}
+
+.product-detail-copy h1 {
+  margin-bottom: 18px;
+}
+
+.product-detail-copy p {
+  line-height: 1.75;
+}
+
+.product-detail-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 14px;
+  margin-top: 28px;
+}
+
+.btn--primary,
+.btn--outline {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  min-height: 46px;
+  padding: 12px 22px;
+  border-radius: 12px;
+  border: 1px solid transparent;
+  font-weight: 700;
+  transition: all 200ms ease;
+}
+
+.btn--primary {
+  background: var(--color-primary);
+  color: #fff;
+}
+
+.btn--primary:hover {
+  background: var(--color-primary-dark);
+  color: #fff;
+}
+
+.btn--outline {
+  border-color: var(--color-primary);
+  background: transparent;
+  color: var(--color-primary);
+}
+
+.btn--outline:hover {
+  background: var(--color-primary);
+  color: #fff;
+}
+
+.catalogue-empty,
+.unknown-product {
+  padding: 40px 24px;
+  border: 1px solid var(--color-border);
+  border-radius: 18px;
+  background: #f3f6fb;
+  text-align: center;
+}
+
+.catalogue-empty {
+  display: grid;
+  justify-items: center;
+  gap: 16px;
+}
+
+.category-overview-grid {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
+.overview-card {
+  overflow: hidden;
+}
+
+.overview-card-image {
+  display: block;
+  aspect-ratio: 16 / 10;
+}
+
+.overview-card-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.overview-card-body h2 {
+  margin-bottom: 12px;
+}
+
+.category-note {
+  margin-top: 12px;
+  color: var(--color-primary);
+  font-size: 0.82rem;
+  font-weight: 700;
+}
+
+.gallery-grid {
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+
+.gallery-card {
+  overflow: hidden;
+  margin: 0;
+}
+
+.gallery-card img {
+  width: 100%;
+  height: 260px;
+  object-fit: cover;
+}
+
+.gallery-card figcaption {
+  padding: 16px 18px 18px;
+  color: var(--color-primary-dark);
+  font-weight: 700;
+}
+
+.market-intro {
+  align-items: center;
+}
+
+.market-icon-card {
+  display: grid;
+  place-items: center;
+  gap: 12px;
+  min-height: 220px;
+  padding: 28px;
+  text-align: center;
+  background: linear-gradient(180deg, #f3f6fb, #fff);
+  color: var(--color-primary);
+}
+
+.market-icon-card p {
+  margin: 0;
+  max-width: 320px;
+}
+
+.process-grid {
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+
+.process-card {
+  padding: 24px;
+}
+
+.process-number {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 44px;
+  height: 44px;
+  margin-bottom: 18px;
+  border-radius: 12px;
+  background: #F3F6FB;
+  color: var(--color-primary);
+  font-weight: 800;
+}
+
+.contact-page-section,
+.enquiry-page-container {
+  padding-top: 32px;
+}
+
+.contact-details {
+  padding: 28px;
+}
+
+.contact-detail {
+  display: flex;
+  gap: 14px;
+  align-items: flex-start;
+  padding: 16px 18px;
+  margin-bottom: 16px;
+}
+
+.contact-detail:last-of-type {
+  margin-bottom: 18px;
+}
+
+.contact-detail-icon {
+  display: inline-grid;
+  place-items: center;
+  width: 40px;
+  height: 40px;
+  border-radius: 12px;
+  background: #F3F6FB;
+  color: var(--color-primary);
+}
+
+.contact-detail h3 {
+  margin-bottom: 6px;
+  font-size: 1rem;
+}
+
+.contact-detail a {
+  display: block;
+  color: var(--color-primary);
+  font-weight: 600;
+}
+
+.contact-coordinator {
+  margin: 0;
+  font-weight: 700;
+  color: var(--color-primary-dark);
+}
+
+.enquiry-form-card {
+  padding: 28px;
+}
+
+.form-description {
+  margin-bottom: 18px;
+}
+
+.form-service-notice {
+  margin-bottom: 22px;
+  padding: 16px 18px;
+  border-left: 4px solid var(--color-secondary);
+  border-radius: 12px;
+  background: #F3F6FB;
+  color: var(--color-text-primary);
+}
+
+.enquiry-form {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 18px 16px;
+}
+
+.form-field {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.form-field--full {
+  grid-column: 1 / -1;
+}
+
+.form-field label {
+  font-weight: 600;
+  color: var(--color-primary-dark);
+}
+
+.form-field input,
+.form-field select,
+.form-field textarea {
+  width: 100%;
+  min-height: 46px;
+  padding: 10px 12px;
+  border: 1px solid var(--color-border);
+  border-radius: 10px;
+  background: #fff;
+  color: var(--color-text);
+}
+
+.form-field textarea {
+  min-height: 130px;
+  resize: vertical;
+}
+
+.form-submit-row {
+  grid-column: 1 / -1;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 14px;
+  margin-top: 4px;
+}
+
+.form-honeypot {
+  position: absolute;
+  left: -9999px;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+}
+
+.form-error-message {
+  margin: 0 0 18px;
+  padding: 12px 14px;
+  border-radius: 10px;
+  background: #F3F6FB;
+  color: var(--color-danger);
+}
+
+@media (max-width: 980px) {
+  .inner-hero-grid,
+  .about-company-grid,
+  .contact-page-grid,
+  .product-detail-layout,
+  .market-intro {
+    grid-template-columns: 1fr;
+  }
+
+  .catalogue-grid,
+  .category-overview-grid,
+  .process-grid,
+  .gallery-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 700px) {
+  .inner-hero {
+    padding-top: 52px;
+  }
+
+  .company-values,
+  .mission-cards,
+  .catalogue-grid,
+  .category-overview-grid,
+  .process-grid,
+  .gallery-grid,
+  .enquiry-form {
+    grid-template-columns: 1fr;
+  }
+
+  .callout-card,
+  .form-submit-row {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .contact-page-grid,
+  .market-intro,
+  .product-detail-layout {
+    gap: 24px;
+  }
+
+  .enquiry-form-card,
+  .contact-details {
+    padding: 20px 18px;
+  }
+}
