@@ -27,3 +27,9 @@ dist-ssr
 .env
 .env.*
 !.env.example
+
+# Backend dependencies
+server/node_modules
+
+# Backend logs
+server/*.log

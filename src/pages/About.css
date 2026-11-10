@@ -1,0 +1,1135 @@
+/* ================================
+   ABOUT PAGE — GLOBAL
+================================ */
+
+.about-page {
+  --about-blue: #102b46;
+  --about-blue-light: #183e60;
+  --about-red: #c62835;
+  --about-white: #ffffff;
+  --about-text: #35485b;
+  --about-muted: #6c7c8d;
+  --about-light: #f4f7fa;
+  --about-border: #e1e7ed;
+
+  overflow: hidden;
+  background: var(--about-white);
+  color: var(--about-text);
+}
+
+.about-container {
+  width: min(1160px, calc(100% - 48px));
+  margin: 0 auto;
+}
+
+.about-page a {
+  text-decoration: none;
+}
+
+.about-page main {
+  padding-top: 0;
+}
+
+.about-intro,
+.about-company,
+.about-overview {
+  padding-top: 80px;
+}
+
+/* ================================
+   SECTION SHARED STYLES
+================================ */
+
+.about-section {
+  padding: 86px 0;
+}
+
+.about-section-label {
+  margin-bottom: 15px;
+}
+
+.about-section-heading {
+  max-width: 720px;
+  margin: 0 auto 43px;
+  text-align: center;
+}
+
+.about-section-heading .about-section-label {
+  justify-content: center;
+}
+
+.about-section-heading h2,
+.about-company-heading h2,
+.about-portfolio-copy h2 {
+  margin: 0;
+  color: var(--about-blue);
+  font-size: clamp(27px, 3.5vw, 39px);
+  font-weight: 800;
+  letter-spacing: -0.7px;
+  line-height: 1.25;
+}
+
+.about-section-heading > p:last-child {
+  max-width: 620px;
+  margin: 16px auto 0;
+  color: var(--about-muted);
+  font-size: 14px;
+  line-height: 1.85;
+}
+
+.about-red-rule {
+  width: 54px;
+  height: 4px;
+  margin-top: 23px;
+  background: var(--about-red);
+}
+
+
+
+/* ================================
+   COMPANY PROFILE — FIXED ALIGNMENT
+================================ */
+
+.about-company-section {
+  padding: 80px 0 90px;
+  background: var(--about-white);
+}
+
+.about-company-grid {
+  display: grid;
+  grid-template-columns: minmax(0, 0.85fr) minmax(0, 1.15fr);
+  align-items: start;
+  gap: 65px;
+  max-width: 1160px;
+  margin: 0 auto;
+}
+
+.about-company-heading {
+  width: 100%;
+  text-align: left;
+}
+
+.about-company-heading .about-section-label {
+  margin: 0 0 18px;
+  color: var(--about-red);
+  font-size: 11px;
+  font-weight: 800;
+  letter-spacing: 2px;
+}
+
+.about-company-heading h2 {
+  max-width: 450px;
+  margin: 0;
+  color: var(--about-blue);
+  font-size: clamp(29px, 3.2vw, 40px);
+  font-weight: 800;
+  letter-spacing: -0.7px;
+  line-height: 1.3;
+}
+
+.about-company-heading .about-red-rule {
+  margin-top: 24px;
+}
+
+.about-company-copy {
+  width: 100%;
+  max-width: 100%;
+  padding-top: 4px;
+  text-align: left;
+}
+
+.about-company-copy p {
+  margin: 0 0 18px;
+  color: var(--about-muted);
+  font-size: 14px;
+  line-height: 1.9;
+  text-align: left;
+}
+
+.about-company-copy p:last-child {
+  margin-bottom: 0;
+}
+
+/* ================================
+   BUSINESS APPROACH
+================================ */
+
+.about-strengths-section {
+  background: var(--about-white);
+}
+
+.about-strengths-grid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 19px;
+}
+
+.about-strength-card {
+  position: relative;
+  overflow: hidden;
+  padding: 29px 22px 28px;
+  border: 1px solid var(--about-border);
+  border-top: 4px solid var(--about-red);
+  background: var(--about-white);
+  transition:
+    transform 0.25s ease,
+    border-color 0.25s ease,
+    box-shadow 0.25s ease;
+}
+
+.about-strength-card:hover {
+  transform: translateY(-4px);
+  border-color: #cbd6e0;
+  box-shadow: 0 12px 30px rgba(16, 43, 70, 0.07);
+}
+
+.about-strength-top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 25px;
+}
+
+.about-strength-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 48px;
+  height: 48px;
+  background: #edf2f7;
+  color: var(--about-blue);
+}
+
+.about-strength-number {
+  color: #b7c2cd;
+  font-size: 12px;
+  font-weight: 800;
+}
+
+.about-strength-card:nth-child(even) .about-strength-icon {
+  background: #fcebed;
+  color: var(--about-red);
+}
+
+.about-strength-card h3 {
+  margin: 0 0 12px;
+  color: var(--about-blue);
+  font-size: 16px;
+  line-height: 1.5;
+}
+
+.about-strength-card p {
+  margin: 0;
+  color: var(--about-muted);
+  font-size: 12px;
+  line-height: 1.9;
+}
+
+/* ================================
+   PRODUCT PORTFOLIO
+================================ */
+
+.about-portfolio-section {
+  background: var(--about-light);
+}
+
+.about-portfolio-grid {
+  display: grid;
+  grid-template-columns: 0.95fr 1.05fr;
+  align-items: center;
+  gap: 65px;
+}
+
+.about-portfolio-copy > p:not(.about-section-label) {
+  margin: 19px 0 0;
+  color: var(--about-muted);
+  font-size: 14px;
+  line-height: 1.9;
+}
+
+.about-text-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  margin-top: 27px;
+  color: var(--about-red);
+  font-size: 13px;
+  font-weight: 800;
+}
+
+.about-text-link:hover {
+  color: var(--about-blue);
+}
+
+.about-portfolio-panel {
+  padding: 30px;
+  border: 1px solid var(--about-border);
+  background: var(--about-white);
+  box-shadow: 0 15px 40px rgba(16, 43, 70, 0.05);
+}
+
+.about-portfolio-panel-heading {
+  display: flex;
+  align-items: center;
+  gap: 13px;
+  padding-bottom: 22px;
+  border-bottom: 1px solid var(--about-border);
+  color: var(--about-blue);
+  font-size: 12px;
+  font-weight: 800;
+  letter-spacing: 1.3px;
+}
+
+.about-portfolio-panel-heading svg {
+  color: var(--about-red);
+}
+
+.about-category-list {
+  display: flex;
+  flex-direction: column;
+}
+
+.about-category-item {
+  display: grid;
+  grid-template-columns: 20px 1fr 16px;
+  align-items: center;
+  gap: 12px;
+  padding: 16px 0;
+  border-bottom: 1px solid #edf0f3;
+  color: var(--about-text);
+  font-size: 13px;
+}
+
+.about-category-item > svg:first-child {
+  color: var(--about-red);
+}
+
+.about-category-item > svg:last-child {
+  color: #a5b2bf;
+}
+
+.about-portfolio-note {
+  margin: 20px 0 0;
+  color: var(--about-muted);
+  font-size: 11px;
+  line-height: 1.8;
+}
+
+/* ================================
+   INTERNATIONAL TRADE CTA
+================================ */
+
+.about-trade-section {
+  position: relative;
+  isolation: isolate;
+  overflow: hidden;
+  padding: 75px 0;
+  background:
+    linear-gradient(
+      115deg,
+      rgba(10, 33, 56, 0.97),
+      rgba(20, 61, 94, 0.93)
+    ),
+    url("/images/Transport.jpeg") center / cover;
+  text-align: center;
+}
+
+.about-trade-overlay {
+  position: absolute;
+  z-index: -1;
+  inset: 0;
+  border-bottom: 5px solid var(--about-red);
+}
+
+.about-trade-content {
+  color: var(--about-white);
+}
+
+.about-trade-content > svg {
+  margin-bottom: 18px;
+  color: var(--about-white);
+}
+
+.about-trade-label {
+  margin: 0 0 17px;
+  color: #ffffff;
+  font-size: 10px;
+  font-weight: 800;
+  letter-spacing: 2px;
+}
+
+.about-trade-content h2 {
+  max-width: 740px;
+  margin: 0 auto;
+  color: var(--about-white);
+  font-size: clamp(28px, 4vw, 43px);
+  font-weight: 800;
+  line-height: 1.25;
+}
+
+.about-trade-content > p:not(.about-trade-label) {
+  max-width: 710px;
+  margin: 20px auto 0;
+  color: rgba(255, 255, 255, 0.84);
+  font-size: 13px;
+  line-height: 1.9;
+}
+
+.about-trade-button {
+  margin-top: 28px;
+  background: var(--about-red);
+  color: var(--about-white);
+}
+
+.about-trade-button:hover {
+  transform: translateY(-2px);
+  background: #a91f2b;
+}
+
+/* ================================
+   RESPONSIVE LAYOUT
+================================ */
+
+@media (max-width: 1000px) {
+  .about-strengths-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .about-company-grid {
+  grid-template-columns: 1fr;
+  gap: 28px;
+}
+
+  .about-portfolio-grid {
+    gap: 38px;
+  }
+
+  .about-footer-main {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 36px;
+  }
+}
+
+@media (max-width: 700px) {
+  .about-container {
+    width: calc(100% - 36px);
+  }
+
+  .about-hero {
+    min-height: 440px;
+    padding: 70px 0 78px;
+    background-position: 58% center;
+  }
+
+  .about-hero-overlay {
+    background: rgba(8, 27, 47, 0.82);
+  }
+
+  .about-hero h1 {
+    font-size: clamp(35px, 9vw, 49px);
+    letter-spacing: -1px;
+  }
+
+  .about-hero-description {
+    font-size: 13px;
+  }
+
+  .about-hero-actions {
+    align-items: stretch;
+    flex-direction: column;
+    max-width: 310px;
+  }
+
+  .about-primary-button,
+  .about-secondary-button {
+    width: 100%;
+  }
+
+  .about-section {
+    padding: 62px 0;
+  }
+
+.about-company-grid {
+  gap: 24px;
+}
+
+.about-purpose-grid,
+.about-portfolio-grid {
+  grid-template-columns: 1fr;
+  gap: 30px;
+}
+
+.about-company-section {
+  padding: 65px 0;
+}
+
+.about-company-copy p {
+  font-size: 13px;
+  line-height: 1.9;
+}
+
+  .about-section-heading {
+    margin-bottom: 30px;
+  }
+
+  .about-purpose-card {
+    padding: 26px;
+  }
+
+  .about-strengths-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .about-strength-card {
+    padding: 23px;
+  }
+
+  .about-portfolio-panel {
+    padding: 23px 19px;
+  }
+
+  .about-trade-section {
+    padding: 60px 0;
+  }
+
+  .about-footer-main {
+    grid-template-columns: 1fr;
+    gap: 32px;
+    padding: 45px 0 35px;
+  }
+
+  .about-footer-bottom {
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 7px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .about-page *,
+  .about-page *::before,
+  .about-page *::after {
+    scroll-behavior: auto !important;
+    transition-duration: 0.01ms !important;
+    animation-duration: 0.01ms !important;
+  }
+}
+
+/* ========================================
+   MISSION & VISION - IMAGE CONTENT LAYOUT
+======================================== */
+
+.about-purpose-section {
+  padding: 55px 0;
+}
+
+.about-purpose-section .about-section-heading {
+  margin-bottom: 35px;
+}
+
+.about-purpose-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: center;
+  gap: 42px;
+  margin-bottom: 38px;
+  padding: 0;
+}
+
+.about-purpose-row:last-child {
+  margin-bottom: 0;
+}
+
+/* Image */
+
+.about-purpose-image {
+  width: 100%;
+  max-width: 430px;
+  height: 260px;
+  overflow: hidden;
+  border-radius: 14px;
+  position: relative;
+  margin: 0 auto;
+}
+
+.about-purpose-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  transition: transform 0.5s ease;
+}
+
+.about-purpose-image:hover img {
+  transform: scale(1.04);
+}
+
+/* Text content */
+
+.about-purpose-content {
+  padding: 20px 10px;
+}
+
+.about-purpose-content .about-card-number {
+  color: #c62828;
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 2px;
+  margin-bottom: 16px;
+}
+
+.about-purpose-content .about-purpose-icon {
+  width: 52px;
+  height: 52px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(198, 40, 40, 0.08);
+  color: #c62828;
+  border-radius: 10px;
+  margin-bottom: 20px;
+}
+
+.about-purpose-content h3 {
+  font-size: clamp(24px, 2.5vw, 32px);
+  line-height: 1.35;
+  font-weight: 700;
+  color: #142b45;
+  margin-bottom: 16px;
+}
+
+.about-purpose-content > p:last-child {
+  font-size: 14px;
+  line-height: 1.9;
+  color: #626d7b;
+  margin: 0;
+}
+
+/* ========================================
+   MOBILE RESPONSIVE
+======================================== */
+
+@media (max-width: 700px) {
+  .about-purpose-section {
+    padding: 38px 0;
+  }
+
+  .about-purpose-section .about-section-heading {
+    margin-bottom: 25px;
+  }
+
+  .about-purpose-row {
+    grid-template-columns: 1fr;
+    gap: 18px;
+    margin-bottom: 30px;
+  }
+
+    .about-purpose-image {
+    height: 200px;
+    max-width: 100%;
+    border-radius: 12px;
+  }
+
+
+  .about-purpose-content {
+    padding: 8px 2px;
+  }
+
+  .about-purpose-content h3 {
+    font-size: 24px;
+  }
+
+  .about-purpose-content > p:last-child {
+    font-size: 13px;
+    line-height: 1.8;
+  }
+
+  /* Image appears above text on mobile */
+  .about-vision-row {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .about-mission-row {
+    display: flex;
+    flex-direction: column-reverse;
+  }
+}
+ /* ABOUT HERO - RIGHT SIDE DESCRIPTION */
+
+.about-hero-description {
+  font-size: 17px;
+  line-height: 1.9;
+  color: #ffffff;
+  font-weight: 500;
+  max-width: 580px;
+  text-shadow: 0 2px 5px rgba(0, 0, 0, 0.65);
+}
+@media (max-width: 700px) {
+  .about-hero-description {
+    font-size: 15px;
+    line-height: 1.8;
+    color: #ffffff;
+  }
+}
+ 
+/* =========================================
+   ABOUT - INDIA TO INTERNATIONAL MARKETS
+   BUTTON STRUCTURE & ALIGNMENT
+========================================= */
+
+.about-trade-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  gap: 18px;
+}
+
+.about-trade-content .about-trade-label {
+  margin: 0;
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: 2px;
+  line-height: 1.5;
+}
+
+.about-trade-content h2 {
+  max-width: 780px;
+  margin: 0;
+  line-height: 1.3;
+}
+
+.about-trade-content > p:not(.about-trade-label) {
+  max-width: 700px;
+  margin: 0;
+  line-height: 1.8;
+}
+
+.about-trade-button {
+  display: inline-flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+
+  gap: 10px;
+
+  width: 250px;
+  min-height: 52px;
+  box-sizing: border-box;
+
+  margin: 12px auto 0;
+  padding: 14px 20px;
+
+  text-align: center;
+  white-space: nowrap;
+
+  font-size: 15px;
+  font-weight: 600;
+  line-height: 1.2;
+
+  border-radius: 8px;
+  text-decoration: none;
+
+  transition: all 0.3s ease;
+}
+
+.about-trade-button svg {
+  width: 17px;
+  height: 17px;
+  flex-shrink: 0;
+}
+
+.about-trade-button:hover {
+  transform: translateY(-3px);
+}
+
+/* Mobile alignment */
+@media (max-width: 768px) {
+  .about-trade-content {
+    gap: 15px;
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+
+  .about-trade-content h2 {
+    font-size: 28px;
+  }
+
+  .about-trade-content > p:not(.about-trade-label) {
+    font-size: 14px;
+    line-height: 1.7;
+  }
+
+  .about-trade-button {
+    width: 100%;
+    max-width: 280px;
+    min-height: 50px;
+    margin-top: 8px;
+  }
+}
+
+
+/* =========================================
+   ABOUT PAGE - PROFESSIONAL VISION & MISSION
+========================================= */
+
+/* Individual card structure */
+.about-purpose-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: stretch;
+  gap: 35px;
+
+  position: relative;
+
+  padding: 24px;
+  margin-bottom: 32px;
+
+  background: #ffffff;
+  border: 1px solid #d6e0eb;
+  border-left: 4px solid #b82025;
+  border-radius: 16px;
+
+  box-shadow: 0 8px 24px rgba(15, 38, 70, 0.07);
+
+  transition:
+    transform 0.3s ease,
+    box-shadow 0.3s ease,
+    border-color 0.3s ease;
+}
+
+/* Mission card red accent on opposite side */
+.about-mission-row {
+  border-left: 1px solid #d6e0eb;
+  border-right: 4px solid #b82025;
+}
+
+/* Professional hover effect */
+.about-purpose-row:hover {
+  transform: translateY(-5px);
+  border-color: #aebfd2;
+
+  box-shadow: 0 14px 32px rgba(15, 38, 70, 0.12);
+}
+
+/* Mission/Vision label with icon on the left */
+.about-purpose-label {
+  display: flex;
+  align-items: center;
+  gap: 13px;
+
+  margin-bottom: 22px;
+}
+
+/* Icon styling */
+.about-purpose-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  width: 48px;
+  height: 48px;
+  min-width: 48px;
+
+  background: #f0f4f9;
+  color: #142b4c;
+
+  border: 1px solid #d5dfeb;
+  border-radius: 12px;
+
+  transition:
+    background 0.3s ease,
+    color 0.3s ease,
+    transform 0.3s ease;
+}
+
+/* Icon hover */
+.about-purpose-row:hover .about-purpose-icon {
+  background: #142b4c;
+  color: #ffffff;
+  transform: scale(1.04);
+}
+
+/* OUR VISION / OUR MISSION text */
+.about-purpose-label span {
+  color: #142b4c;
+
+  font-size: 15px;
+  font-weight: 700;
+  letter-spacing: 1.8px;
+  line-height: 1.4;
+}
+
+/* Remove old numbering */
+.about-card-number {
+  display: none !important;
+}
+
+/* Content styling */
+.about-purpose-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+
+  padding: 15px 20px;
+}
+
+.about-purpose-content h3 {
+  color: #142b4c;
+
+  font-size: 25px;
+  font-weight: 700;
+  line-height: 1.4;
+
+  margin: 0 0 16px;
+}
+
+.about-purpose-content > p:last-child {
+  color: #455468;
+
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 1.85;
+
+  margin: 0;
+}
+
+/* Image styling */
+.about-purpose-image {
+  width: 100%;
+  min-height: 280px;
+  height: 100%;
+
+  overflow: hidden;
+  border-radius: 12px;
+}
+
+.about-purpose-image img {
+  display: block;
+
+  width: 100%;
+  height: 100%;
+  min-height: 280px;
+
+  object-fit: cover;
+
+  transition: transform 0.5s ease;
+}
+
+.about-purpose-row:hover .about-purpose-image img {
+  transform: scale(1.035);
+}
+
+/* Mobile responsive */
+@media (max-width: 768px) {
+  .about-purpose-row {
+    grid-template-columns: 1fr;
+    gap: 20px;
+
+    padding: 18px;
+    margin-bottom: 24px;
+
+    border-radius: 14px;
+    border-left: 3px solid #b82025;
+  }
+
+  .about-mission-row {
+    border-right: 1px solid #d6e0eb;
+    border-left: 3px solid #b82025;
+  }
+
+  .about-purpose-label {
+    gap: 12px;
+    margin-bottom: 18px;
+  }
+
+  .about-purpose-icon {
+    width: 43px;
+    height: 43px;
+    min-width: 43px;
+
+    border-radius: 10px;
+  }
+
+  .about-purpose-label span {
+    font-size: 14px;
+    letter-spacing: 1.5px;
+  }
+
+  .about-purpose-content {
+    padding: 8px 4px 12px;
+  }
+
+  .about-purpose-content h3 {
+    font-size: 21px;
+    line-height: 1.4;
+  }
+
+  .about-purpose-content > p:last-child {
+    font-size: 14px;
+    line-height: 1.8;
+  }
+
+  .about-purpose-image {
+    height: 220px;
+    min-height: 220px;
+  }
+
+  .about-purpose-image img {
+    height: 220px;
+    min-height: 220px;
+  }
+}
+
+/* =========================================
+   ABOUT PAGE - OUR COMPANY PREMIUM DESIGN
+========================================= */
+
+/* Main two-column layout */
+.about-company-grid {
+  display: grid;
+  grid-template-columns: 0.85fr 1.15fr;
+  align-items: center;
+  gap: 65px;
+
+  max-width: 1180px;
+  margin: 0 auto;
+}
+
+/* Left-side heading */
+.about-company-heading {
+  max-width: 480px;
+}
+
+.about-company-heading .about-section-label {
+  color: #b82025;
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 2px;
+  margin-bottom: 18px;
+}
+
+.about-company-heading h2 {
+  color: #102b4c;
+
+  font-size: clamp(32px, 3vw, 40px);
+  font-weight: 750;
+  line-height: 1.3;
+  letter-spacing: -0.7px;
+
+  margin: 0;
+}
+
+/* Red decorative line */
+.about-company-heading .about-red-rule {
+  width: 55px;
+  height: 4px;
+
+  background: #b82025;
+  border-radius: 3px;
+
+  margin-top: 24px;
+}
+
+/* Right-side description card */
+.about-company-copy {
+  background: #f8fafc;
+
+  border: 1px solid #e2e8f0;
+  border-left: 3px solid #b82025;
+  border-radius: 12px;
+
+  padding: 28px 30px;
+
+  box-shadow: 0 8px 25px rgba(16, 43, 76, 0.05);
+
+  color: #334155;
+  font-size: 16.5px;
+  font-weight: 450;
+  line-height: 1.85;
+}
+
+/* Paragraph spacing */
+.about-company-copy p {
+  color: #334155;
+
+  font-size: 16.5px;
+  font-weight: 450;
+  line-height: 1.85;
+
+  margin: 0 0 18px;
+}
+
+.about-company-copy p:last-child {
+  margin-bottom: 0;
+}
+
+/* Responsive tablet */
+@media (max-width: 1024px) {
+  .about-company-grid {
+    grid-template-columns: 1fr 1fr;
+    gap: 35px;
+  }
+
+  .about-company-heading h2 {
+    font-size: 32px;
+  }
+
+  .about-company-copy {
+    padding: 24px;
+  }
+}
+
+/* Responsive mobile */
+@media (max-width: 768px) {
+  .about-company-grid {
+    grid-template-columns: 1fr;
+    gap: 30px;
+  }
+
+  .about-company-heading {
+    max-width: 100%;
+  }
+
+  .about-company-heading h2 {
+    font-size: 30px;
+    line-height: 1.35;
+  }
+
+  .about-company-copy {
+    padding: 22px;
+    font-size: 15px;
+    line-height: 1.8;
+  }
+
+  .about-company-copy p {
+    font-size: 15px;
+    line-height: 1.8;
+    margin-bottom: 16px;
+  }
+}
+
+/* =========================================
+   ABOUT PAGE - FIXED NAVIGATION BAR
+========================================= */
+
+.about-page header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1000;
+
+  background: rgba(255, 255, 255, 0.96);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+
+  box-shadow: 0 4px 18px rgba(15, 38, 70, 0.08);
+}
+
+/* Prevent page content from hiding behind navbar */
+.about-page main {
+  padding-top: 90px;
+}

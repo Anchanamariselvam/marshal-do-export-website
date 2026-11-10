@@ -1,0 +1,164 @@
+.shared-header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1000;
+  width: 100%;
+  background: #ffffff;
+  border-bottom: 1px solid #e8edf2;
+  box-shadow: 0 4px 18px rgba(15, 35, 60, 0.06);
+}
+
+.shared-header-inner {
+  width: min(1200px, calc(100% - 48px));
+  min-height: 72px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 24px;
+}
+
+.shared-brand {
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+  flex-shrink: 0;
+  color: #102b46;
+  text-decoration: none;
+}
+
+.shared-brand-logo {
+  width: 46px;
+  height: 46px;
+  object-fit: contain;
+}
+
+.shared-brand-copy {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.shared-brand-copy strong {
+  font-size: 15px;
+  font-weight: 800;
+  letter-spacing: 0.8px;
+}
+
+.shared-brand-copy small {
+  color: #66788a;
+  font-size: 9px;
+  font-weight: 700;
+  letter-spacing: 1.5px;
+}
+
+.shared-nav {
+  display: flex;
+  align-items: center;
+  gap: 25px;
+}
+
+.shared-nav > a {
+  color: #263c50;
+  font-size: 13px;
+  font-weight: 600;
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+.shared-nav > a:hover,
+.shared-nav > a.active {
+  color: #b58b45;
+}
+
+.shared-nav > .shared-enquiry-button {
+  padding: 12px 17px;
+  border-radius: 5px;
+  background: #102b46;
+  color: #ffffff;
+  white-space: nowrap;
+  transition:
+    background 0.2s ease,
+    transform 0.2s ease;
+}
+
+.shared-nav > .shared-enquiry-button:hover {
+  background: #1c4569;
+  color: #ffffff;
+  transform: translateY(-1px);
+}
+
+.shared-menu-button {
+  display: none;
+  align-items: center;
+  justify-content: center;
+  border: 0;
+  background: transparent;
+  color: #102b46;
+  cursor: pointer;
+}
+
+@media (max-width: 900px) {
+  .shared-header-inner {
+    min-height: 66px;
+    width: calc(100% - 32px);
+  }
+
+  .shared-brand-logo {
+    width: 42px;
+    height: 42px;
+  }
+
+  .shared-menu-button {
+    display: inline-flex;
+  }
+
+  .shared-nav {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    display: none;
+    align-items: stretch;
+    gap: 0;
+    padding: 10px 20px 20px;
+    background: #ffffff;
+    border-top: 1px solid #edf0f4;
+    box-shadow: 0 12px 20px rgba(15, 35, 60, 0.08);
+  }
+
+  .shared-nav.shared-nav-open {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .shared-nav > a {
+    padding: 13px 4px;
+  }
+
+  .shared-nav > .shared-enquiry-button {
+    margin-top: 8px;
+    text-align: center;
+  }
+}
+
+@media (max-width: 420px) {
+  .shared-brand {
+    gap: 8px;
+  }
+
+  .shared-brand-logo {
+    width: 40px;
+    height: 40px;
+  }
+
+  .shared-brand-copy strong {
+    font-size: 12px;
+  }
+
+  .shared-brand-copy small {
+    font-size: 8px;
+    letter-spacing: 1px;
+  }
+}

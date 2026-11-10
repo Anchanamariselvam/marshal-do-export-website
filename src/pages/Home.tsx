@@ -1,413 +1,430 @@
 import { Link } from "react-router-dom";
 import {
   ArrowRight,
-  ArrowUpRight,
+  Award,
   CheckCircle2,
   Globe2,
+  MapPin,
   PackageCheck,
-  ShieldCheck,
   Ship,
 } from "lucide-react";
+
 import "./Home.css";
+import Header from "../components/Header";
+import Footer from "../components/Footer";
 
-const categories = [
+const products = [
   {
-    name: "Deluxe Spices",
+    title: "Deluxe Spices",
     description:
-      "Explore selected spices, including green cardamom, cloves, black pepper, nutmeg and mace.",
-    filter: "Deluxe Spices",
-    image:
-      "https://images.unsplash.com/photo-1596040033229-a9821ebd058d?auto=format&fit=crop&w=900&q=85",
+      "Select high-grade whole cardamom, cloves, and premium saffron.",
+    image: "/images/Deluxe_Spices.jpeg",
+    link: "/products",
   },
   {
-    name: "Spices",
+    title: "Spices",
     description:
-      "Discover whole spices, including cumin, fennel, coriander, mustard, ajwain and fenugreek.",
-    filter: "Spices",
-    image:
-      "https://images.unsplash.com/photo-1532336414038-cf19250c5757?auto=format&fit=crop&w=900&q=85",
+      "Pure ground and whole turmeric, chilli powder, black pepper, and cumin seed.",
+    image: "/images/Spices.jpg",
+      link: "/products",
   },
   {
-    name: "Rice",
+    title: "Rice",
     description:
-      "Enquire about available rice products and discuss varieties and requirements with our team.",
-    filter: "Rice",
-    image:
-      "https://images.unsplash.com/photo-1586201375761-83865001e31c?auto=format&fit=crop&w=900&q=85",
+      "Premium long-grain basmati rice, cleaned and sorted for international markets.",
+    image: "/images/Rice.jpg",
+      link: "/products",
   },
   {
-    name: "Pulses & Lentils",
+    title: "Pulses & Lentils",
     description:
-      "Explore pulse and lentil categories for your food sourcing requirements.",
-    filter: "Pulses and Lentils",
-    image:
-      "https://images.unsplash.com/photo-1515543904379-3d757afe72e4?auto=format&fit=crop&w=900&q=85",
+      "Export-grade red lentils, chickpeas, and green gram, moisture-controlled.",
+    image: "/images/Lentil.jpg",
+      link: "/products",
   },
   {
-    name: "Dried Seafood",
-    description: "Discover our dried seafood category for business sourcing enquiries.",
-    filter: "Dried Seafood",
-    image:
-      "https://images.unsplash.com/photo-1534483509719-3feaee7c30da?auto=format&fit=crop&w=900&q=85",
+    title: "Dried Sea Foods",
+    description:
+      "Hygienically dried premium prawns, ribbon fish, and ancillary sea catches.",
+    image: "/images/Dried_Fish.jpg",
+      link: "/products",
   },
   {
-    name: "Canned Fish",
+    title: "Canned Fish",
     description:
-      "Enquire about canned fish products, including Jack Mackerel in Olive Oil.",
-    filter: "Canned Fish",
-    image:
-      "https://images.unsplash.com/photo-1584263347416-85a696b4eda7?auto=format&fit=crop&w=900&q=85",
+      "Sustainably caught tuna and sardines packed in premium sunflower oil.",
+    image: "/images/Canned_Fish.jpeg",
+      link: "/products",
   },
 ];
 
-const features = [
+const gallery = [
   {
-    icon: ShieldCheck,
-    title: "Quality-Focused Sourcing",
-    description: "A product portfolio presented with clear, accurate information.",
+    title: "Packaging Operations",
+    image: "/images/Packaging.jpeg",
   },
   {
-    icon: PackageCheck,
-    title: "Packaging Coordination",
-    description: "Discuss product presentation and packing requirements with our team.",
+    title: "Warehouse Management",
+    image: "/images/Warehouse.jpeg",
   },
   {
-    icon: Ship,
-    title: "Export Enquiry Support",
-    description: "Share your destination and shipment requirements for discussion.",
-  },
-  {
-    icon: Globe2,
-    title: "Global Market Enquiries",
-    description: "Connect with our coordinator about your international sourcing needs.",
+    title: "Seafreight Cargo Loading",
+    image: "/images/Cargo.jpeg",
   },
 ];
 
-export default function Home() {
+
+
+function Home() {
+ 
   return (
-    <>
-      <section className="hero">
-        <div className="container hero-grid">
-          <div className="hero-content">
-            <span className="eyebrow hero-eyebrow">
-              INDIAN FOOD PRODUCTS · INTERNATIONAL B2B TRADE
-            </span>
+    <div className="home-page">
+      <Header />
 
-            <h1>
-              Connecting Indian
-              <br />
-              Food Products with
-              <br />
-              <span>Global Markets</span>
-            </h1>
+<div className="hero-announcement ">
+  <div className="hero-announcement-track">
+    <span>
+      <span className="announcement-item">
+        Premium Quality Indian Food Exports
+      </span>
+      <span className="announcement-dot">•</span>
 
-            <p className="hero-description">
-              Explore our range of Indian spices, rice, pulses, lentils and
-              seafood products for international sourcing enquiries. We welcome
-              discussions with importers, distributors and business buyers
-              about product availability, packaging requirements and export
-              enquiries.
-            </p>
+      <span className="announcement-item">
+        Delivering Excellence Across International Markets
+      </span>
+      <span className="announcement-dot">•</span>
 
-            <div className="hero-actions">
-              <Link to="/products" className="btn btn--accent">
-                Explore Our Products <ArrowRight size={17} />
-              </Link>
+      <span className="announcement-item">
+        Trusted Partnerships and Reliable Supply
+      </span>
+      <span className="announcement-dot">•</span>
 
-              <Link to="/contact" className="btn hero-secondary-btn">
-                Send an Enquiry <ArrowUpRight size={17} />
-              </Link>
-            </div>
+      <span className="announcement-item">
+        Connecting Indian Producers to Global Markets
+      </span>
+      <span className="announcement-dot">•</span>
+    </span>
 
-            <div className="hero-note">
-              <CheckCircle2 size={17} />
-              <span>
-                Your Partner for Product Sourcing and Export Enquiries
-              </span>
-            </div>
-          </div>
+    <span aria-hidden="true">
+      <span className="announcement-item">
+        Premium Quality Indian Food Exports
+      </span>
+      <span className="announcement-dot">•</span>
 
-          <div className="hero-visual">
-            <img
-              src="https://images.unsplash.com/photo-1574323347407-f5e1ad6d020b?auto=format&fit=crop&w=1400&q=90"
-              alt="Agricultural produce prepared for commercial distribution"
-            />
+      <span className="announcement-item">
+        Delivering Excellence Across International Markets
+      </span>
+      <span className="announcement-dot">•</span>
 
-            <div className="hero-image-label">
-              <span className="hero-label-icon">
-                <Ship size={22} />
-              </span>
-              <div>
-                <strong>MARSHAL DO EXPORT</strong>
-                <span>Indian Food & Agricultural Exports</span>
+      <span className="announcement-item">
+        Trusted Partnerships and Reliable Supply
+      </span>
+      <span className="announcement-dot">•</span>
+
+      <span className="announcement-item">
+        Connecting Indian Producers to Global Markets
+      </span>
+      <span className="announcement-dot">•</span>
+    </span>
+  </div>
+</div>
+
+      <main>
+        {/* HERO */}
+        <section className="hero-section" id="home">
+          <div className="site-container hero-grid">
+            <div className="hero-copy">
+              <p className="eyebrow hero-eyebrow">
+                <span /> YOUR TRUSTED PARTNER IN GLOBAL FOOD TRADE
+              </p>
+
+              <h1>
+                Quality That Travels
+                <br />
+              
+                Worldwide
+              </h1>
+
+              <p className="hero-description">
+                Processing and exporting premium Indian spices, rice, pulses, and food commodities to global markets through quality-driven operations and reliable export solutions.
+              </p>
+
+              <div className="hero-actions">
+                <a className="button button-primary" href="#products">
+                  Explore Products <ArrowRight size={15} />
+                </a>
+                <a className="button button-outline" href="#contact">
+                  Send an Enquiry
+                </a>
               </div>
             </div>
 
-            <div className="hero-image-accent" />
-          </div>
-        </div>
-      </section>
-
-      <section className="feature-strip">
-        <div className="feature-marquee" aria-label="Our export services">
-          <div className="feature-marquee-track">
-            {[...features, ...features].map((feature, index) => {
-              const Icon = feature.icon;
-              return (
-                <article
-                  className="feature-item"
-                  key={`${feature.title}-${index}`}
-                  aria-hidden={index >= features.length}
-                >
-                  <div className="feature-icon"><Icon size={22} /></div>
-                  <div>
-                    <h2>{feature.title}</h2>
-                    <p>{feature.description}</p>
-                  </div>
-                </article>
-              );
-            })}
-          </div>
-        </div>
-      </section>
-
-      <section className="section about-preview">
-        <div className="container about-grid">
-          <div className="about-image-wrap">
-            <img
-              src="https://images.unsplash.com/photo-1516939884455-1445c8652f83?auto=format&fit=crop&w=1200&q=85"
-              alt="Commercial logistics and goods handling"
-              loading="lazy"
-            />
-            <div className="about-image-caption">
-              <span className="caption-dot" />
-              <span>Indian Products for Global Markets</span>
+            <div className="hero-image-wrap">
+              <img
+                src={`${import.meta.env.BASE_URL}images/Saffron.png`}
+                alt="Premium Indian spices prepared for international food exports"
+              />
+              <div className="hero-image-label">
+                <Globe2 size={17} />
+                <span>
+                  <strong>Authentic Indian Spices</strong>
+                  <small>Carefully Selected, Quality Assured</small>
+                </span>
+              </div>
             </div>
           </div>
+        </section>
 
-          <div className="about-content">
-            <span className="eyebrow">ABOUT MARSHAL DO EXPORT</span>
-            <h2>
-              Bringing Indian Food Products to International Markets
-            </h2>
-            <p>
-              MARSHAL DO EXPORT focuses on connecting international buyers
-              with a diverse selection of Indian food and agricultural
-              products. Our portfolio includes spices, rice, pulses, lentils
-              and seafood for business-to-business sourcing enquiries.
-              <br />
-              <br />
-              We aim to make the enquiry process straightforward through clear
-              product information, responsive communication and coordination
-              around buyers' requirements.
-            </p>
-
-            <div className="mission-grid">
-              <article>
-                <h3>Our Mission</h3>
-                <p>
-                  To connect international buyers with Indian food and
-                  agricultural products through clear communication, informed
-                  sourcing enquiries and professional coordination.
-                </p>
-              </article>
-
-              <article>
-                <h3>Our Approach</h3>
-                <p>
-                  We focus on understanding buyer requirements, sharing
-                  available product information and discussing packaging and
-                  destination-related needs to support informed business
-                  decisions.
-                </p>
-              </article>
+        {/* QUALITY STRIP */}
+        <section className="quality-strip" aria-label="Our strengths">
+          <div className="site-container quality-grid">
+            <div className="quality-item">
+              <span className="quality-icon">
+                <Award size={18} />
+              </span>
+              <strong>Quality Products</strong>
             </div>
-
-            <Link to="/about" className="text-link">
-              Discover Our Company <ArrowRight size={17} />
-            </Link>
+            <div className="quality-item">
+              <span className="quality-icon">
+                <PackageCheck size={18} />
+              </span>
+              <strong>Export-Ready Packaging</strong>
+            </div>
+            <div className="quality-item">
+              <span className="quality-icon">
+                <Ship size={18} />
+              </span>
+              <strong>Reliable Shipping</strong>
+            </div>
+            <div className="quality-item">
+              <span className="quality-icon">
+                <Globe2 size={18} />
+              </span>
+              <strong>Global Markets</strong>
+            </div>
           </div>
-        </div>
-      </section>
+        </section>
 
-      <section className="section section--soft product-preview">
-        <div className="container">
-          <div className="section-heading">
-            <div>
-              <span className="eyebrow">OUR PRODUCT PORTFOLIO</span>
-              <h2>Explore Our Product Range</h2>
-              <p>
-                Discover our selection of Indian food and agricultural
-                products for international business enquiries. Explore the
-                categories below to identify products relevant to your sourcing
-                requirements.
+        {/* ABOUT */}
+        <section className="section about-section" id="about">
+          <div className="site-container about-grid">
+            <div className="about-image">
+  <img
+    src="/images/kanyakumari-memorial.jpg"
+    alt="Vivekananda Rock Memorial surrounded by the sea in Kanyakumari, Tamil Nadu"
+    loading="lazy"
+  />
+
+  <div className="about-image-caption">
+    <MapPin size={16} />
+    Kanyakumari, Tamil Nadu, India
+  </div>
+</div>
+
+            <div className="about-copy">
+              <p className="eyebrow">ABOUT MARSHAL DO EXPORT</p>
+              <h2>Grounded in Kanyakumari, Serving the Whole World</h2>
+              <p className="section-description">
+                Indian exporter of premium groceries and food products based
+                in Kanyakumari, Tamil Nadu, serving global markets with
+                quality, trust, and reliable shipping. We source directly
+                from premium growers to meet stringent global standards.
               </p>
-            </div>
 
-            <Link to="/products" className="btn btn--outline">
-              View All Products <ArrowRight size={17} />
-            </Link>
-          </div>
-
-          <div className="category-grid">
-            {categories.map((category, index) => (
-              <Link
-                to={`/products?category=${encodeURIComponent(category.filter)}`}
-                className="category-card"
-                key={category.name}
-              >
-                <div className="category-image">
-                  <img
-                    src={category.image}
-                    alt={category.name}
-                    loading="lazy"
-                  />
-                  <span className="category-number">
-                    {String(index + 1).padStart(2, "0")}
-                  </span>
-                </div>
-
-                <div className="category-body">
-                  <h3>{category.name}</h3>
-                  <p>{category.description}</p>
-                  <span className="category-link">
-                    Explore {category.name} <ArrowUpRight size={16} />
-                  </span>
-                </div>
-              </Link>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      <section className="section logistics-section">
-        <div className="container logistics-grid">
-          <div className="logistics-content">
-            <span className="eyebrow">INTERNATIONAL B2B ENQUIRIES</span>
-            <h2>Let's Discuss Your Product Requirements</h2>
-            <p>
-              Looking for Indian food and agricultural products for your
-              business? Share your product interests, destination market and
-              packaging requirements with MARSHAL DO EXPORT.
-              <br />
-              <br />
-              Our team can review your enquiry and discuss the available
-              product information and next steps.
-            </p>
-
-            <ul className="logistics-list">
-              <li>
-                <CheckCircle2 size={19} />
-                Product and category enquiries
-              </li>
-              <li>
-                <CheckCircle2 size={19} />
-                Packaging and specification discussions
-              </li>
-              <li>
-                <CheckCircle2 size={19} />
-                Destination-market requirements
-              </li>
-              <li>
-                <CheckCircle2 size={19} />
-                Business sourcing enquiries
-              </li>
-            </ul>
-
-            <div className="hero-actions">
-              <Link to="/enquiry" className="btn btn--primary">
-                Send an Enquiry <ArrowRight size={17} />
-              </Link>
-              <Link to="/contact" className="btn btn--outline">
-                Contact Our Team <ArrowUpRight size={17} />
-              </Link>
+              <div className="mission-grid">
+                <article className="mission-card">
+                  <h3>Our Mission</h3>
+                  <p>
+                    To bridge the gap between Indian agricultural harvesting
+                    and international markets by ensuring pristine quality
+                    preservation and flawless B2B trade execution.
+                  </p>
+                </article>
+                <article className="mission-card">
+                  <h3>Our Vision</h3>
+                  <p>
+                    To stand as the most trusted premier global supply chain
+                    partner for authentic Indian dry goods, spices, and marine
+                    foods, distinguished by reliability.
+                  </p>
+                </article>
+              </div>
             </div>
           </div>
+        </section>
 
-          <div className="logistics-image">
-            <img
-              src="https://images.unsplash.com/photo-1494412651409-8963ce7935a7?auto=format&fit=crop&w=1200&q=85"
-              alt="Cargo shipping containers at a port"
-              loading="lazy"
-            />
-            <div className="logistics-image-overlay">
-              <Ship size={27} />
-              <span>International Trade Enquiries</span>
-            </div>
-          </div>
-        </div>
-      </section>
+        {/* PRODUCTS */}
+        <section className="section products-section" id="products">
+          <div className="site-container">
+            
+<div className="products-heading-row">
+  <div className="section-heading">
+    <p className="eyebrow">PRODUCT DIRECTORY</p>
+    <h2>Premium Portfolios We Export</h2>
+  </div>
 
-      <section className="credentials-section">
-        <div className="container credentials-grid">
-          <div>
-            <span className="eyebrow">COMPANY INFORMATION</span>
-            <h2>Regulatory and Industry References</h2>
-            <p>
-              We recognise the importance of understanding applicable
-              regulatory and industry requirements when discussing
-              international food trade. Relevant registration details and
-              approvals should be confirmed for the specific business and
-              products involved.
-            </p>
-          </div>
+  <Link to="/products" className="all-categories-btn">
+  View All Categories <ArrowRight size={16} />
+</Link>
+</div>
 
-          <div className="credentials-marquee" aria-label="Export credential references">
-            <div className="credentials-marquee-track">
-              {[0, 1, 2, 3].map((item) => (
-                <article className="credential-card" key={item} aria-hidden={item > 1}>
-                  {item % 2 === 0 ? <ShieldCheck size={27} /> : <Globe2 size={27} />}
-                  <div>
-                    <h3>{item % 2 === 0 ? "US FDA" : "MPEDA"}</h3>
-                    <p>
-                      {item % 2 === 0
-                        ? "Registration or compliance details to be confirmed."
-                        : "Registration or membership details to be confirmed, as applicable."}
-                    </p>
+
+            <div className="product-grid">
+              {products.map((product) => (
+                <article className="product-card" key={product.title}>
+                  <a
+                    href={product.link}
+                    className={`product-image ${
+  product.title === "Canned Fish" ? "canned-fish-image" : ""
+}`}>
+                    <img
+                      src={product.image}
+                      alt={product.title}
+                      loading="lazy"
+                    />
+                  </a>
+                  <div className="product-card-content">
+                    <h3>{product.title}</h3>
+                    <p>{product.description}</p>
+                    <a
+                      href={product.link}
+                      className="product-link"
+                      aria-label={`Explore ${product.title}`}
+                    >
+                      Explore Product <ArrowRight size={14} />
+                    </a>
                   </div>
                 </article>
               ))}
             </div>
           </div>
-        </div>
-      </section>
+        </section>
 
-      <section className="section gallery-preview">
-        <div className="container">
-          <div className="section-heading">
-            <div>
-              <span className="eyebrow">A CLOSER LOOK</span>
-              <h2>Our Product and Export Gallery</h2>
-              <p>
-                Explore visual highlights of products, packaging and export
-                operations as the company gallery develops.
-              </p>
+        {/* LOGISTICS */}
+        <section className="section logistics-section" id="export">
+          <div className="site-container logistics-grid">
+            <div className="logistics-copy">
+              <p className="eyebrow">B2B LOGISTICS &amp; INFRASTRUCTURE</p>
+              <h2>Seamless Packaging, Transport &amp; Global Reach</h2>
+
+              <div className="logistics-feature">
+                <CheckCircle2 size={18} />
+                <div>
+                  <h3>Quality Packaging</h3>
+                  <p>
+                    Strict moisture barrier lining and puncture-resistant
+                    outer cartons tailored for overseas seafreight cargo.
+                  </p>
+                </div>
+              </div>
+
+              <div className="logistics-feature">
+                <CheckCircle2 size={18} />
+                <div>
+                  <h3>Fast Shipping</h3>
+                  <p>
+                    Coordination with major logistics lines directly from
+                    Tuticorin and Chennai ports for rapid transit times.
+                  </p>
+                </div>
+              </div>
+
+              <div className="logistics-feature">
+                <CheckCircle2 size={18} />
+                <div>
+                  <h3>Worldwide Delivery</h3>
+                  <p>
+                    Robust compliance handling and clear documentation
+                    dispatch for efficient customs clearance at any port.
+                  </p>
+                </div>
+              </div>
+
+              {/* <div className="destination-box">
+                <h4>ACTIVE B2B TRADE DESTINATIONS</h4>
+                <div className="destination-tags">
+                  {destinations.map((destination) => (
+                    <span key={destination}>{destination}</span>
+                  ))}
+                </div>
+              </div> */}
             </div>
 
-            <Link to="/gallery" className="btn btn--outline">
-              View Gallery <ArrowRight size={17} />
-            </Link>
-          </div>
+            
+<div className="logistics-image">
+  <img
+    src="/images/Transport.jpeg"
+    alt="International freight and shipping logistics"
+    loading="lazy"
+  />
+</div>
 
-          <div className="gallery-preview-grid">
-            <img
-              src="https://images.unsplash.com/photo-1596040033229-a9821ebd058d?auto=format&fit=crop&w=900&q=85"
-              alt="Selection of spices"
-              loading="lazy"
-            />
-            <img
-              src="https://images.unsplash.com/photo-1574323347407-f5e1ad6d020b?auto=format&fit=crop&w=900&q=85"
-              alt="Agricultural products"
-              loading="lazy"
-            />
-            <img
-              src="https://images.unsplash.com/photo-1494412651409-8963ce7935a7?auto=format&fit=crop&w=900&q=85"
-              alt="Shipping containers"
-              loading="lazy"
-            />
           </div>
-        </div>
-      </section>
-    </>
+        </section>
+
+        {/* ACCREDITATIONS
+        <section className="accreditation-section">
+          <div className="site-container accreditation-grid">
+            <div className="accreditation-heading">
+              <p className="eyebrow">ORGANISATIONAL ACCREDITATIONS</p>
+              <h2>Key Institutional Association</h2>
+            </div>
+
+            <article className="accreditation-card">
+              <ShieldCheck size={23} />
+              <div>
+                <h3>US FDA</h3>
+                <p>
+                  Prepared and aligned for food imports compliance to United
+                  States markets.
+                </p>
+              </div>
+            </article>
+
+            <article className="accreditation-card">
+              <Award size={23} />
+              <div>
+                <h3>MPEDA</h3>
+                <p>
+                  Registered for premium marine products export facilitation,
+                  adhering to seafood preservation protocols.
+                </p>
+              </div>
+            </article>
+          </div>
+        </section> */}
+
+        {/* GALLERY */}
+        <section className="section gallery-section" id="gallery">
+          <div className="site-container">
+            <div className="gallery-heading">
+              <div>
+                <p className="eyebrow">OPERATIONAL SNAPSHOTS</p>
+                <h2>Behind the Scenes at Marshal Do Export</h2>
+              </div>
+             <Link
+  className="button button-light-outline"
+  to="/gallery"
+>
+  View Full Gallery <ArrowRight size={14} />
+</Link>
+            </div>
+
+            <div className="gallery-grid">
+              {gallery.map((item) => (
+                <article className="gallery-card" key={item.title}>
+                  <img src={item.image} alt={item.title} loading="lazy" />
+                  <h3>{item.title}</h3>
+                </article>
+              ))}
+            </div>
+          </div>
+        </section>
+      </main>
+
+      <Footer />
+    </div>
   );
 }
+
+export default Home;
