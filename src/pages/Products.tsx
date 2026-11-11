@@ -360,17 +360,18 @@ useEffect(() => {
       : [],
   }));
 
-  setDisplayProducts(formattedProducts);
-})
+console.log("Fetched products:", formattedProducts);
+setDisplayProducts(formattedProducts);})
     .catch((error) => {
       console.error("Error fetching products:", error);
     });
 }, []);
 
-const filteredProducts = displayProducts.filter((product) => {  const matchesCategory =
+const filteredProducts = displayProducts.filter((product) => {
+  const matchesCategory =
     activeCategory === "All" ||
-    product.category === activeCategory;
-
+    String(product.category || "").trim().toLowerCase() ===
+      activeCategory.trim().toLowerCase();
   const search = searchTerm.trim().toLowerCase();
 
   const matchesSearch =
