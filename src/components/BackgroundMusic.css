@@ -1,0 +1,44 @@
+.background-music-button {
+  position: fixed;
+  bottom: 25px;
+  right: 25px;
+  z-index: 9999;
+
+  display: flex;
+  align-items: center;
+  gap: 8px;
+
+  padding: 12px 18px;
+  border: 1px solid rgba(255, 255, 255, 0.25);
+  border-radius: 50px;
+
+  background: linear-gradient(135deg, #0b2d5c, #164a8a);
+  color: #ffffff;
+
+  font-size: 13px;
+  font-weight: 600;
+
+  box-shadow: 0 8px 25px rgba(11, 45, 92, 0.3);
+  cursor: pointer;
+
+  transition: all 0.3s ease;
+}
+
+.background-music-button:hover {
+  background: linear-gradient(135deg, #c62828, #e53935);
+  transform: translateY(-3px);
+  box-shadow: 0 12px 30px rgba(198, 40, 40, 0.3);
+}
+
+.background-music-button svg {
+  flex-shrink: 0;
+}
+
+@media (max-width: 768px) {
+  .background-music-button {
+    bottom: 18px;
+    right: 15px;
+    padding: 11px 14px;
+    font-size: 12px;
+  }
+}

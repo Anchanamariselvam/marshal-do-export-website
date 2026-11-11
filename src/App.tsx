@@ -11,10 +11,13 @@ import Contact from "./pages/Contact";
 import UserManagement from "./pages/UserManagement";
 import AdminLogin from "./pages/AdminLogin";
 import AdminDashboard from "./pages/AdminDashboard";
+import BackgroundMusic from "./components/BackgroundMusic";
 
 function App() {
   return (
     <BrowserRouter>
+      <BackgroundMusic />
+
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/about" element={<About />} />
