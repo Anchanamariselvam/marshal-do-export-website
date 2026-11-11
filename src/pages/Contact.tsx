@@ -24,7 +24,7 @@ const handleSubmit = async (
 
   try {
     const response = await fetch(
-      "http://localhost:5000/api/enquiries",
+      "https://marshal-do-export-api.onrender.com/api/enquiries",
       {
         method: "POST",
         headers: {

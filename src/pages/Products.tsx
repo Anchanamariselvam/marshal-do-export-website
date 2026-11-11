@@ -336,7 +336,7 @@ const [activeCategory, setActiveCategory] = useState("All");
 const [searchTerm, setSearchTerm] = useState("");
 const [displayProducts, setDisplayProducts] = useState<Product[]>(products);
 useEffect(() => {
-  fetch("http://localhost:5000/api/products")
+  fetch("https://marshal-do-export-api.onrender.com/api/products")
     .then((response) => {
       if (!response.ok) {
         throw new Error("Failed to fetch products");
@@ -566,3 +566,8 @@ const filteredProducts = displayProducts.filter((product) => {  const matchesCat
 }
 
 export default Products;
+
+
+
+
+

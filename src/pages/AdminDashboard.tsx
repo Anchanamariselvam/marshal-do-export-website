@@ -53,7 +53,7 @@ function AdminDashboard() {
   const [duplicateCategoryId, setDuplicateCategoryId] =
   useState<number | null>(null);
 
-  const CATEGORY_API = "http://localhost:5000/api/categories";
+  const CATEGORY_API = "https://marshal-do-export-api.onrender.com/api/categories";
 
   // Product states
   const [products, setProducts] = useState<Product[]>([]);
@@ -72,13 +72,13 @@ function AdminDashboard() {
 const [duplicateProductId, setDuplicateProductId] =
   useState<number | null>(null);
 
-  const PRODUCT_API = "http://localhost:5000/api/products";
+  const PRODUCT_API = "https://marshal-do-export-api.onrender.com/api/products";
   // Enquiry Management states
 const [enquiries, setEnquiries] = useState<Enquiry[]>([]);
 const [loadingEnquiries, setLoadingEnquiries] = useState(false);
 const [enquiryMessage, setEnquiryMessage] = useState("");
 
-const ENQUIRY_API = "http://localhost:5000/api/enquiries";
+const ENQUIRY_API = "https://marshal-do-export-api.onrender.com/api/enquiries";
 
   useEffect(() => {
     const token = localStorage.getItem("adminToken");
